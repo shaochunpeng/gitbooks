@@ -1,4 +1,4 @@
-# Lab 1B: Spoofing Exercise
+# 🖥 Lab 1B: Spoofing Exercise
 
 ## Purpose
 
@@ -74,7 +74,7 @@ Lab report should contain :
 5. Open another terminal and connect to the spoof machine. Then run scapy command to open a scapy interactive session.
 6.  In scapy, use:
 
-    send(IP(dst=’192.168.20.x’,src=’192.168.10.y’)/’quick brown fox jumps over the lazy dog’)
+    send(IP(dst=’192.168.30.x’,src=’192.168.10.y’)/’quick brown fox jumps over the lazy dog’)
 
     sendp(Ether(src=’12:34:56:78:9a:ab’)/IP(dst=’192.168.20.x’,src=’8.8.8.8’)/’quick brown fox jumps over the lazy cat’)
 
