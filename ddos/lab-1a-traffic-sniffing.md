@@ -26,6 +26,11 @@ Sniffing experiment using router. Red dots are the sniffing points.
 
 <figure><img src="https://lh7-us.googleusercontent.com/_YB0xtHyCQrLBS9j5WOTBveQ2PZSBNF-41ogg_dNHkhsqVAcVPk2EKV6J4GQDu0BoAKtgZ-hfOCqG0YqdPqTfi61WuFrHcrMqhXVe-utruP2dABWWU3k6nOoe_DxmKX6IYoLCE9d7Qj1ErmekMtXqw" alt=""><figcaption></figcaption></figure>
 
+Here, ip for node1 in the graph( not the same machine in ssh config file) is 192.168.30.2.\
+ip for node 2( not the same machine in ssh config file) is 192.168.10.x (x = \[10 - 24])\
+Sniffer A is 192.168.10.9\
+We do not have sniffer B yet( It is down for some reason).
+
 ## Questions:
 
 1. Describe the layers and fields of a packet captured from your network.
