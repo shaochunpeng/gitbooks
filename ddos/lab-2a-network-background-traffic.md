@@ -65,7 +65,24 @@ Submission together with Lab 2B.
 
 
 
-    Save the replay traffic and compare it to the real one.
+    Save the replay traffic and compare it to the real one.\
+
+4. You have your pcap file in the lab3scripts directory, then you can plot the time series using the python script. Make sure that the captured pcap file is the only pcap file in that folder.\
+   \#python plot\_time\_series\_example.py\
+   \
+   This command will generate two figures. The first one is the time series from the real campus background traffic. After closing the first one, the second one will appear, which is the time series of simulated background traffic.\
+
+5.  Make a copy of plot\_time\_series\_example.py:
+
+    \# cp plot\_time\_series\_example.py your\_user\_name.py
+
+
+
+    Use a text editor to edit your\_user\_name.py. The line 28 of the file has the options to change different arriving time algorithms. The available values are integers between 0 to 6. The number\_of\_packets refers to the total number of time stamps and expected\_duration modifies the total duration from the first time stamp to the last time stamp.&#x20;
+
+
+
+    Modify those options and see if you get a figure that is closer to the real background traffic.
 
     \
 
