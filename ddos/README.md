@@ -19,3 +19,7 @@ description: Lab Guide
 {% content-ref url="lab-2a-network-background-traffic.md" %}
 [lab-2a-network-background-traffic.md](lab-2a-network-background-traffic.md)
 {% endcontent-ref %}
+
+{% content-ref url="lab-2b-attack-generation-1.md" %}
+[lab-2b-attack-generation-1.md](lab-2b-attack-generation-1.md)
+{% endcontent-ref %}
