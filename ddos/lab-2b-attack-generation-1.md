@@ -44,7 +44,7 @@ In this lab, you will:
 
     Bot2: 192.168.10.132 Hosted on machine:192.168.10.20
 
-    Credentials: root/private123
+    Credentials: ^^^^/^^^^^^ Same as spoof
 
 
 
@@ -52,7 +52,7 @@ In this lab, you will:
 
     IP: 192.168.10.125
 
-    Credentials: \*\*\*\*\***/**\* \*\*\*\*\*
+    Credentials: \*\*\*\*\***/**\* \*\*\*\*\* Same as spoof
 
 
 
