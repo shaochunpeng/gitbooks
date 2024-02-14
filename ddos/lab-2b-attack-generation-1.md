@@ -50,9 +50,9 @@ In this lab, you will:
 
     CnC: command and control machine used to observe and connect to Bots.
 
-    IP: 192.168.10.111
+    IP: 192.168.10.125
 
-    Credentials: root/private123
+    Credentials: \*\*\*\*\***/**\* \*\*\*\*\*
 
 
 
