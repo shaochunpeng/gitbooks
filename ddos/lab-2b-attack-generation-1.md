@@ -65,7 +65,7 @@ In this lab, you will:
 
     DNS Server: used in DNS Amplification attack.
 
-    IP: 192.168.10.135
+    IP: 192.168.10.100
 
 
 
