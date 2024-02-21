@@ -90,3 +90,25 @@ You should be able to compare the data of the two files to observe DNS Amplifica
 Due date given in Canvas Syllabus
 
 Make sure you did your lab by yourself, not under other students help.\
+
+
+## Appendix
+
+Slow HTTP
+
+The slow HTTP attack sonsumes victim webpage server by slowly sending HTTP requests. The HTTP server keeps the connection until all the webserver’s resources are consumed. That is why the slowloris attack does not affect at the very beginning but slowly makes the web server stop responding.
+
+* Slowloris HTTP DoS [https://web.archive.org/web/20090822001255/http://ha.ckers.org/slowloris/](https://web.archive.org/web/20090822001255/http://ha.ckers.org/slowloris/)
+
+\
+
+
+DNS Amplification Attack
+
+There are many DNS amplification attack tools available on Github. Many of them are written in python with scapy library. However, scapy is naturally very very slow. Using scapy to perform DNS amplification attacks might work when you have multiple bots and more DNS servers. As a hint, hping3 is not capable of crafting a DNS request packet, but it can be used to replay a crafted DNS payload. You can simply use dig to generate a legitimate DNS packet first, store the DNS payload only, and then send the DNS payload with a spoofed source. By using hping3, you will see the limit of a DNS server, and why the victim is not disconnected during an attack.&#x20;
+
+* Honeypot Based monitoring of Amplification DDoS attacks.
+
+[https://labs.ripe.net/Members/johannes\_krupp/honeypot-based-monitoring-of-amplification-ddos-attacks](https://labs.ripe.net/Members/johannes\_krupp/honeypot-based-monitoring-of-amplification-ddos-attacks)
+
+\
