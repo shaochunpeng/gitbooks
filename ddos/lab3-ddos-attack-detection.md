@@ -32,8 +32,12 @@ In this lab, you will:
 
 GUIDE
 
-1. Setup and connect to CUVPN on your pc.
-2. Add SSH configuration: (add “ForwardX11 yes” to host spoof)
+1. Setup and connect to CUVPN on your pc.\
+   \
+
+2. Add SSH configuration: (add “ForwardX11 yes” to host spoof)\
+   \
+
 3.  In CnC machine, goto DDoS\_Lab5 folder.
 
     $ssh -X cnc&#x20;
@@ -41,13 +45,18 @@ GUIDE
     \#cd DDoS\_Lab5
 
     \
-    \*if there isn’t a DDoS\_Lab5 folder, use “unzip lab5.zip” to create a new DDoS\_lab5 folder. Otherwise do not touch this zip file.
+    \*if there isn’t a DDoS\_Lab5 folder, use “unzip lab5.zip” to create a new DDoS\_lab5 folder. Otherwise do not touch this zip file.\
+    \
+
 4. Traffic Volume Detection\
    This method simply uses a threshold on the traffic time series to decide whether there is a DDoS attack. The file “timeseires.txt” is generated from previous captured pcap files.
    1. Packets Count Thresholding\
       First plot the packets count time series and get a rough idea about the traffic. Following command plot the “rx\_packet” column of the file “timeseries.txt”.\
       \
-      [root@cnc:\~/DDoS\_Lab5# ./plot.py -d timeseries.txt 1](#user-content-fn-1)[^1]![](https://lh7-us.googleusercontent.com/k57FZMgJ3jVTSy7xuFaNVEz-LGe7hst-mjn2LSmyhIuiSN77vSNvFJQ3PxLjc3bPFl5XCCnoBuZIt4T3vv9xofYhQ7vz4Ohg5sT4Ob7PhoYFRs\_lsQKNkuY4NZdcdLp5iYsL47LFfdOoEY46pgqdlQ)\
+      [root@cnc:\~/DDoS\_Lab5# ./plot.py -d timeseries.txt 1](#user-content-fn-1)[^1]\
+      \
+      ![](https://lh7-us.googleusercontent.com/k57FZMgJ3jVTSy7xuFaNVEz-LGe7hst-mjn2LSmyhIuiSN77vSNvFJQ3PxLjc3bPFl5XCCnoBuZIt4T3vv9xofYhQ7vz4Ohg5sT4Ob7PhoYFRs\_lsQKNkuY4NZdcdLp5iYsL47LFfdOoEY46pgqdlQ)\
+      \
       The attack time tag for this data set is logged in file “complete\_attack\_times”. \
       Use option “-r” and “-t” to determine a good threshold. For example:\
       root@cnc:\~/DDoS\_Lab5# ./plot.py -d timeseries.txt 1 -r complete\_attack\_times -t 30000\
@@ -59,7 +68,9 @@ GUIDE
 
    2. Data Volume Thresholding\
       Repeat all steps in (a), use the “rx\_byte” column instead.\
-      root@cnc:\~/DDoS\_Lab5# ./plot.py -d timeseries.txt 2
+      root@cnc:\~/DDoS\_Lab5# ./plot.py -d timeseries.txt 2\
+      \
+
 5. CUSUM Detection\
    To perform CUSUM analysis, execute “vda.py” with the “-c” option on the time series data file. \
    \
@@ -67,7 +78,9 @@ GUIDE
    \# ./vda.py -c timeseries.txt 2 -alpha 0.22 -epsilon 0.98811 -ce 0.13\
    \
    Then perform the steps in 5(a) to process “Csm\_20130604\_timeseries.txt”.\
-   \# ./plot.py -d “Csm\_20130604\_timeseries.txt 1
+   \# ./plot.py -d “Csm\_20130604\_timeseries.txt 1\
+   \
+
 6. Wavelet of the CUSUM detection\
    To perform Wavelet analysis, execute “vda.py” with the “-w1” option on the time series data file.\
    \
@@ -79,6 +92,7 @@ GUIDE
    \
    You can use the “-u” option instead of “-t” to detect the attack with a low pass filter. Every node below the given value is considered as “positive”.\
    \# ./plot.py -d Wvl\_20130604\_timeseries.txt 1 -r complete\_attack\_times -u -50000000\
+   \
 
 7. CUSUM of the Wavelet Detection\
    To perform Wave-CUSUM analysis, execute “vda.py” with the “-w2” option on the time series data file. \
@@ -86,7 +100,9 @@ GUIDE
    \# ./vda.py -w2 timeseries.txt 2 -alpha 0.0 -ce 0.5\
    \
    Then repeat the steps in 5(a):\
-   \#./plot.py -d Csm\_salem\_20130604\_timeseries.txt 1&#x20;
+   \#./plot.py -d Csm\_salem\_20130604\_timeseries.txt 1 \
+   \
+
 8. Entropy Based Detection\
    The preprocessing of the intermediate file for the entropy detection takes a very long time. In this step, we preprocessed the pcap files and generated the intermediate “fileoutputTime0604.entr” for you. \
    \
