@@ -65,8 +65,20 @@ Lab Report
 
     \
     You will see output similar to this: \
-    Namespace(FA=None, attack\_times='complete\_attack\_times', columns=\[], ent=False, file\_n ame='autoTest.hist', margin=\[0.15], output='autoTest.hist.out', scale='1.25', spoofPac ketCount=False) Copying autoTest.hist to temp.txt Performing attack number 1 Average cycle: 5.95511450382 Average time: 0.000528254351145 Performing attack number 2 Average cycle: 5.81375166889 Average time: 0.000568560080107 Performing attack number 3 Average cycle: 5.98514517218 Average time: 0.000573065158677 ('It took ', 339, ' seconds') End of process!! Copying spoofed\_1\_autoTest.hist to temp.txt Performing attack number 1 Average cycle: 5.62683823529 Average time: 0.000446215992647 Performing attack number 2 Average cycle: 5.49799062291 Average time: 0.000533518084394 Performing attack number 3 Average cycle: 5.7324270557 Average time: 0.000679098474801 ('It took ', 333, ' seconds') \
-    End of process!!\
+    \
+    `Namespace(FA=None, attack_times='complete_attack_times', columns=[], ent=False, file_name='autoTest.hist', margin=[0.15], output='autoTest.hist.out', scale='1.25', spoofPac ketCount=False)` \
+    `Copying autoTest.hist to temp.txt` \
+    `Performing attack number 1 Average cycle: 5.95511450382 Average time: 0.000528254351145` \
+    `Performing attack number 2 Average cycle: 5.81375166889 Average time: 0.000568560080107` \
+    `Performing attack number 3 Average cycle: 5.98514517218 Average time: 0.000573065158677` \
+    `('It took ', 339, ' seconds')` \
+    `End of process!!` \
+    `Copying spoofed_1_autoTest.hist to temp.txt` \
+    `Performing attack number 1 Average cycle: 5.62683823529 Average time: 0.000446215992647` \
+    `Performing attack number 2 Average cycle: 5.49799062291 Average time: 0.000533518084394` \
+    `Performing attack number 3 Average cycle: 5.7324270557 Average time: 0.000679098474801` \
+    `('It took ', 333, ' seconds')` \
+    `End of process!!`\
     \
     This step may takes about 15 minutes to finish(crash). Roughly 5 minutes for each sub-step. After this step finishes, you would have a new histogram file(spoofed).\
 
