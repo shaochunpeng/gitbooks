@@ -80,5 +80,7 @@ HTTP reverse proxy machines: root : root\
 5. Analyze your result. Discuss if there are changes, why? What’s happening behind the scenes?\
    How is ddm.py working? How can you know it?(tshark logs, respond times, ping response)
 6. Finish lab report. It is due on 4/24/2024. Late submission requires prior approval by Dr.Brooks.
-7. My email: chunpes@g.clemson.edu\
-   &#x20;&#x20;
+7. My email: chunpes@g.clemson.edu
+
+* Old reference (previous semester guide) available in Canvas: Files->LabMaterials->OLD\_REF\_lab7....pdf\
+  &#x20;&#x20;
