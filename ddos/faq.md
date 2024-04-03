@@ -2,7 +2,7 @@
 description: issues during lab.
 ---
 
-# FAQ
+# ❓ FAQ
 
 ## Settings / Access&#x20;
 
