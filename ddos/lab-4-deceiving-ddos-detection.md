@@ -53,7 +53,7 @@ Lab Report
    \
    This step takes about 1 hour or more to finish depending on the size of the pcap file.\
 
-4. NOTE: The “outputTime0604.hist” is provided so you don’t need to perform step 5. You are supposed to replace the input file name “autoTest.hist” everywhere in step 6 with “outputTime0604.hist”.\
+4. NOTE: The “outputTime0604.hist” is provided so you don’t need to perform step 3. You are supposed to replace the input file name “autoTest.hist” everywhere in step 5 with “outputTime0604.hist”.\
 
 5.  Generate Spoofed histogram file.
 
