@@ -32,10 +32,10 @@ description: Lab Guide
 [lab3-ddos-attack-detection.md](lab3-ddos-attack-detection.md)
 {% endcontent-ref %}
 
-{% content-ref url="lab-4-deceiving-ddos-detection.md" %}
-[lab-4-deceiving-ddos-detection.md](lab-4-deceiving-ddos-detection.md)
+{% content-ref url="lab-4a-deceiving-ddos-detection.md" %}
+[lab-4a-deceiving-ddos-detection.md](lab-4a-deceiving-ddos-detection.md)
 {% endcontent-ref %}
 
-{% content-ref url="lab-4-dynamic-ddos-mitigation-ddm.md" %}
-[lab-4-dynamic-ddos-mitigation-ddm.md](lab-4-dynamic-ddos-mitigation-ddm.md)
+{% content-ref url="lab-4b-dynamic-ddos-mitigation-ddm.md" %}
+[lab-4b-dynamic-ddos-mitigation-ddm.md](lab-4b-dynamic-ddos-mitigation-ddm.md)
 {% endcontent-ref %}

@@ -1,4 +1,4 @@
-# 🖥️ Lab 4 Dynamic DDos Mitigation(DDM)
+# 🖥️ Lab 4B Dynamic DDos Mitigation(DDM)
 
 ## Introduction
 
@@ -68,9 +68,13 @@ HTTP reverse proxy machines: root : root\
 2. Download ddm.py from previous link, put it to DNS machine lab7 folder(you can modify this on your machine or on DNS machine) \
    host\_username set to 'ddm'\
    guest\_username set to 'root'\
-   hosts\_file set to '\~/lab7/hosts.txt'\
-   other settings follow the script comments.
-3. On DNS machine, run \~/lab7/ddm.py (your modified script.)
+   hosts\_file set to '/root/lab7/hosts.txt'\
+   other settings follow the script comments.\
+   \
+   _**Note, when using vboxmanage command in the script, the vm name shall be CentOS7, not CentOS.**_\
+   _**vboxmanage guestproperty will not work. You are to modify the script to skip this part.**_\
+
+3. On DNS machine, run /root/lab7/ddm.py (your modified script.)
 4. On CNC machine, se ping\_web.sh to evaluate the mitigation effects:\
    compare response time with same type/amount of attack on this two domains:\
    http://edge.ddm.lan\
