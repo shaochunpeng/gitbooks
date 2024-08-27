@@ -1,5 +1,6 @@
 ---
 description: Clemson ECE Security Lab Handbook
+hidden: true
 ---
 
 # Security Lab
