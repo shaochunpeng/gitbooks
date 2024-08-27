@@ -1,8 +1,9 @@
 ---
 description: This page contains access information for ECE security lab.
+hidden: true
 ---
 
-# 🖥 Lab Access
+# 🖥️ Lab Access
 
 ### IN-PERSON Access
 

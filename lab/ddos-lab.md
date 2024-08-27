@@ -1,5 +1,6 @@
 ---
 description: Flood Attack With Hping3 and TCP SYN Flooding
+hidden: true
 ---
 
 # DDoS Lab
