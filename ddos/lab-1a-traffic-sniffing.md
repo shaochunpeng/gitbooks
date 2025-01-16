@@ -52,11 +52,11 @@ We do not have sniffer B yet( It is down for some reason).
 Step by step guide for this lab.
 
 1. (Optional - for remote access use )\
-   Open _**TWO**_ terminals, connect to node1/2 and sniffer respectively. \
-   `$ssh node1` \
+   Open _**TWO**_ terminals, connect to machine1/2 and sniffer respectively. \
+   `$ssh machine1` \
    `$ssh sniffer`
-2. In the terminal connected to the sniffer, open Wireshark(or Tshark). The interface to capture traffic is enp2s0. Start capture. \
-   Then on the other terminal that is connected to node1 or node2, ping 192.168.30.2 \
+2. In the terminal connected to the sniffer, open Wireshark(or Tshark). The interface to capture traffic is enp3s1. Start capture. \
+   Then on the other terminal that is connected to machine1 or machine2(or any other student machine), ping 192.168.30.2 \
    Then you should have captured these packets on the sniffer. Terminate the capture. \
    Reference: [https://www.google.com/search?q=wireshark](https://www.google.com/search?q=wireshark)
 3. Write filters to show the packets you want to capture. Take screenshots or results.
