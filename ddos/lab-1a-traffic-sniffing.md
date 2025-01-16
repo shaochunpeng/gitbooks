@@ -1,4 +1,4 @@
-# 🖥 Lab 1A: Traffic Sniffing
+# 🖥️ Lab 1A: Traffic Sniffing
 
 ## Purpose
 
@@ -28,7 +28,7 @@ Sniffing experiment using router. Red dots are the sniffing points.
 
 Here, ip for node1 in the graph( not the same machine in ssh config file) is 192.168.30.2.\
 ip for node 2( not the same machine in ssh config file) is 192.168.10.x (x = \[10 - 24])\
-Sniffer A is 192.168.10.9\
+Sniffer A is 192.168.10.10\
 We do not have sniffer B yet( It is down for some reason).
 
 ## Questions:
