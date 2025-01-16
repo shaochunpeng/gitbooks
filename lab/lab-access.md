@@ -7,7 +7,7 @@ hidden: true
 
 ### IN-PERSON Access
 
-In Spring 2024, students are encouraged to go to security lab to perform the lab contents.
+In Spring 2025, students are encouraged to go to security lab to perform the lab contents.
 
 ~~In FALL2022, students are suggested to go to security lab to perform lab contents.~~
 
@@ -16,8 +16,8 @@ LOCATION: 22B Riggs Hall ( Level B, double door, door windows covered by shutter
 Access Code: See Canvas
 
 Machines Available: \
-192.168.10.8 - 192.168.10.22\
-Login Credentials: Distributed in lecture.
+192.168.10.10 - 192.168.10.22\
+Login Credentials: Ask TA.
 
 DO NOT UNPLUG ANY POWER PLUG.\
 DO NOT SHUTDOWN MACHINES.
@@ -39,26 +39,26 @@ Student can access security lab via Clemson Network.
 
       \
       Host sniffer\
-      &#x20; HostName 192.168.10.9\
-      &#x20; User \<your username here>\
-      &#x20; ForwardX11 yes\
-      &#x20; ProxyCommand ssh -W %h:%p eceddos
-
-      \
-      Host node1\
-      &#x20; User \<your username here>\
       &#x20; HostName 192.168.10.10\
+      &#x20; User \<your username here>\
       &#x20; ForwardX11 yes\
       &#x20; ProxyCommand ssh -W %h:%p eceddos
 
       \
-      Host node2\
+      Host machine1\
       &#x20; User \<your username here>\
       &#x20; HostName 192.168.10.11\
       &#x20; ForwardX11 yes\
       &#x20; ProxyCommand ssh -W %h:%p eceddos
+
+      \
+      Host machine2\
+      &#x20; User \<your username here>\
+      &#x20; HostName 192.168.10.12\
+      &#x20; ForwardX11 yes\
+      &#x20; ProxyCommand ssh -W %h:%p eceddos
   2. Open two terminals, connect to node1/2 and sniffer respectively. \
-     &#x20;`$ssh node1`
+     &#x20;`$ssh machine1`
 
 ## Login and change password
 
