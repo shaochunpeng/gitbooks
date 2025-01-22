@@ -68,8 +68,11 @@ Step by step guide for this lab.
    `dd if=/dev/urandom of=file.txt bs=1048576 count=100`\
    [https://skorks.com/2010/03/how-to-quickly-generate-a-large-file-on-the-command-line-with-linux/](https://skorks.com/2010/03/how-to-quickly-generate-a-large-file-on-the-command-line-with-linux/)
 5. Delete the trash large file. (to save storage at lab machines)
-6. Use the scripts in the provided zip file to plot the required graph. (You have to read the script to figure it out.)
-7. Finish lab report.(PDF format ONLY)
-8. FAQ: Email [chunpes@g.clemson.edu](mailto:chunpes@g.clemson.edu) if you have any questions regarding this guide.
+6. ~~Use the scripts in the provided zip file to plot the required graph. (You have to read the script to figure it out.)~~&#x20;
+7. See this gist link for scripts(also in Canvas->Files->Lab->scripts.zip):\
+   [https://gist.github.com/shaochunpeng/7634486d7a2aea894e589997191a456e](https://gist.github.com/shaochunpeng/7634486d7a2aea894e589997191a456e)
+8. Use the scripts(plot\_time\_series\_example.py) in the provided zip file to plot the required graph\
+   PLEASE READ THE SCRIPTS to figure out what they do.
+9. Finish lab report.(PDF format ONLY)
+10. FAQ: Email [chunpes@g.clemson.edu](mailto:chunpes@g.clemson.edu) if you have any questions regarding this guide.
 
-\
