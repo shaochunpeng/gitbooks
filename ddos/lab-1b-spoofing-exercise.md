@@ -1,4 +1,4 @@
-# 🖥 Lab 1B: Spoofing Exercise
+# 🖥️ Lab 1B: Spoofing Exercise
 
 ## Purpose
 
@@ -47,12 +47,15 @@ Lab report should contain :
 
     Host spoof\
     &#x20; user root\
-    &#x20; Hostname 192.168.10.125\
+    &#x20; Hostname 192.168.10.111\
     &#x20; ProxyCommand ssh -W %h:%p eceddos\
 
-2. Open 2 terminals\
+2. SPOOF MACHINE IP: 192.168.10.111\
+   SPOOF MACHINE LOGIN: root\
+   PASS: private123
+3. Open 2 terminals\
    spoof and sniff
-3.  In the terminal connected to the sniffer, open Wireshark(or Tshark). The interface to capture traffic is enp2s0. Start capture.&#x20;
+4.  In the terminal connected to the sniffer, open Wireshark(or Tshark). The interface to capture traffic is enp2s0. Start capture.&#x20;
 
     Then on the other terminal that is connected to node1 or node2, ping 192.168.30.2.&#x20;
 
@@ -65,25 +68,25 @@ Lab report should contain :
     Then you should have captured these packets on sniffer. Terminate the capture.&#x20;
 
 
-4.  In the terminal connected to the spoof machine, use nmap to discover all the active hosts in your subnet by using following command:\
+5.  In the terminal connected to the spoof machine, use nmap to discover all the active hosts in your subnet by using following command:\
     \>$ nmap -sn 192.168.10.0/24
 
     This will give you the MAC addresses and IP address for the hosts in your subnet.
 
     (Read the manual page for more options of this command.)
-5. Open another terminal and connect to the spoof machine. Then run scapy command to open a scapy interactive session.
-6.  In scapy, use:
+6. Open another terminal and connect to the spoof machine. Then run scapy command to open a scapy interactive session.
+7.  In scapy, use:
 
     send(IP(dst=’192.168.30.x’,src=’192.168.10.y’)/’quick brown fox jumps over the lazy dog’)
 
     sendp(Ether(src=’12:34:56:78:9a:ab’)/IP(dst=’192.168.20.x’,src=’8.8.8.8’)/’quick brown fox jumps over the lazy cat’)
 
     This sends a DNS query with a spoofed source IP address. Remember to fill in x and y in IPs appropriately.
-7. Spoof at least three ip addresses on your subnet. Send different payload messages for each destination IP you are trying to spoof.
-8. Write filters in wireshark/Tshark to detect spoofing.(take screenshots)
-9. Continuously sniff traffic on wireshark to try and intercept potential spoofing attempts.\
-   Scapy: [https://scapy.readthedocs.io/en/latest/usage.html](https://scapy.readthedocs.io/en/latest/usage.html)
-10. Finish lab report.(Pdf format ONLY)
+8. Spoof at least three ip addresses on your subnet. Send different payload messages for each destination IP you are trying to spoof.
+9. Write filters in wireshark/Tshark to detect spoofing.(take screenshots)
+10. Continuously sniff traffic on wireshark to try and intercept potential spoofing attempts.\
+    Scapy: [https://scapy.readthedocs.io/en/latest/usage.html](https://scapy.readthedocs.io/en/latest/usage.html)
+11. Finish lab report.(Pdf format ONLY)
 
     \
 
