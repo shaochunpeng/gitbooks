@@ -24,9 +24,9 @@ In this lab, you will:
 2. Take a look at the RFC for the Internet Protocol, RFC791(https://www.ietf.org/rfc/rfc791.txt)\
    Explain what ip address spoofing is, and what a host on the network must do to spoof its ip address
 3. Take a look at the RFC for the User Datagram Protocol, RFC768\
-   [https://www.ietf.org/rfc/rfc7](https://www.ietf.org/rfc/rfc7) \
+   [https://www.ietf.org/rfc/rfc768.txt ](https://www.ietf.org/rfc/rfc768.txt)\
    And the RFC for the Transmission Control Protocol, RFC 793\
-   [https://www.ietf.org/rfc/rfc793.t](https://www.ietf.org/rfc/rfc793.t) \
+   [https://www.ietf.org/rfc/rfc793.txt](https://www.ietf.org/rfc/rfc793.txt) \
    Explain why an attacker cannot just grab any existing IP packet carrying UDP or TCP, change only the IP addresses in there, and expect the target host to accept the packet. Especially for TCP, you don’t have to read the entire RFC but focus on the header(pages 1519).
 
 ## Lab Report
