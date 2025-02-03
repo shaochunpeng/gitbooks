@@ -77,9 +77,13 @@ Lab report should contain :
 6. Open another terminal and connect to the spoof machine. Then run scapy command to open a scapy interactive session.
 7.  In scapy, use:
 
-    send(IP(dst=’192.168.30.x’,src=’192.168.10.y’)/’quick brown fox jumps over the lazy dog’)
+    send(IP(dst=’192.168.x.x’,src=’192.168.x.y’)/’quick brown fox jumps over the lazy dog’)
 
-    sendp(Ether(src=’12:34:56:78:9a:ab’)/IP(dst=’192.168.20.x’,src=’8.8.8.8’)/’quick brown fox jumps over the lazy cat’)
+    sendp(Ether(src=’12:34:56:78:9a:ab’)/IP(dst=’192.168.x.x’,src=’8.8.8.8’)/’quick brown fox jumps over the lazy cat’)\
+    Choose appropriate IP(no need to be real address) to perform this step.\
+    Real machines:\
+    VLAN1: 192.168.10.0/24 (machine 10\~24)\
+    VLAN2: 192.168.30.0/24 (machine 192.168.30.2)
 
     This sends a DNS query with a spoofed source IP address. Remember to fill in x and y in IPs appropriately.
 8. Spoof at least three ip addresses on your subnet. Send different payload messages for each destination IP you are trying to spoof.
