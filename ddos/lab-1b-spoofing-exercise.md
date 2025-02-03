@@ -55,7 +55,7 @@ Lab report should contain :
    PASS: private123
 3. Open 2 terminals\
    spoof and sniff
-4.  In the terminal connected to the sniffer, open Wireshark(or Tshark). The interface to capture traffic is enp2s0. Start capture.&#x20;
+4.  In the terminal connected to the sniffer, open Wireshark(or Tshark). The interface to capture traffic is enp3s1. Start capture.&#x20;
 
     Then on the other terminal that is connected to node1 or node2, ping 192.168.30.2.&#x20;
 
