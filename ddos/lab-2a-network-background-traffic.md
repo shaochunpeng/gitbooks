@@ -1,4 +1,4 @@
-# 🖥 Lab 2A: Network Background Traffic
+# 🖥️ Lab 2A: Network Background Traffic
 
 ## Introduction
 
@@ -38,8 +38,8 @@ Submission together with Lab 2B.
 
 ## Lab Guide
 
-1. Host Sniffer: 192.168.10.9\
-   Host Spoof: 192.168.10.125\
+1. Host Sniffer: 192.168.10.10\
+   Host Spoof: 192.168.10.111\
    see previous lab guide  & canvas files/announcement for credentials.
 2. login to sniffer machine. In the terminal connected to the sniffer, use tshark to collect campus network traffic data.(use interface enp3s1). Capture traffic at your choice.
 3.  Open another terminal and connect to the spoof machine.
@@ -47,15 +47,15 @@ Submission together with Lab 2B.
     $ssh spoof
 
     \
-    At spoof machine, enter lab3scripts folder:
+    At spoof machine, enter lab2a folder:
 
-    \#cd lab3scripts
+    \#cd lab2a
 
 
 
     Get the pcap file you captured on the sniffer machine:
 
-    \#scp your\_user\_name@192.168.10.9:\~/campus\_traffic.pcap .
+    \#scp your\_user\_name@192.168.10.10:\~/campus\_traffic.pcap .
 
 
 
@@ -66,6 +66,8 @@ Submission together with Lab 2B.
 
 
     Save the replay traffic and compare it to the real one.\
+    \
+    \* you can use tcpdump/tcpreplay on spoof machine, (or your own machine).\
 
 4. You have your pcap file in the lab3scripts directory, then you can plot the time series using the python script. Make sure that the captured pcap file is the only pcap file in that folder.\
    \#python plot\_time\_series\_example.py\
@@ -84,7 +86,9 @@ Submission together with Lab 2B.
 
     Modify those options and see if you get a figure that is closer to the real background traffic.
 
-    \
+* \*NOTE\* Spoof machine is a shared VM. Anyone in class can use this machine. If you are to save your personal file, find a safe place. Try not modify files that already existed there.
+
+\
 
 
 \
